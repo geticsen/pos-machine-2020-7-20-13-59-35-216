@@ -1,5 +1,5 @@
 # context map
-![context map](./pos-context map.png "optional title")
+![context map](./pos-context map.png)
 
 |  createReceipt()   | Description  |
 |  ----  | ----  |
