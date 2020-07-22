@@ -24,7 +24,7 @@ function createReceipt(barcodes){
 }
 
 function filterAndCountBarcodes(barcodes){
-    barcodes = countTimes(barcodes);
+    barcodes = coutBarcodes(barcodes);
     var filterBarcodes=[];
     for(var key in barcodes){
         if(checkBarcodeExist(key)){
@@ -34,7 +34,7 @@ function filterAndCountBarcodes(barcodes){
     return filterBarcodes;
 }
 
-function countTimes(barcodes){
+function coutBarcodes(barcodes){
     var mergeConmmon = [];
     for(var i=0;i<barcodes.length;i++){
         if(mergeConmmon.hasOwnProperty(barcodes[i])){
