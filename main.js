@@ -1,5 +1,5 @@
 function printReceipt(barcodes) {
-    filterbarcodes = filterNotExistBarcodes(barcodes);
+    filterbarcodes = filterAndCountBarcodes(barcodes);
     var receipt = createReceipt(filterbarcodes);
     console.log(receipt);
 }
@@ -23,7 +23,7 @@ function createReceipt(barcodes){
     return content;
 }
 
-function filterNotExistBarcodes(barcodes){
+function filterAndCountBarcodes(barcodes){
     barcodes = countTimes(barcodes);
     var filterBarcodes=[];
     for(var key in barcodes){
