@@ -22,6 +22,7 @@ function createReceipt(barcodes){
     "**********************";
     return content;
 }
+
 function filterNotExistBarcodes(barcodes){
     barcodes = countTimes(barcodes);
     var filterBarcodes=[];
@@ -32,6 +33,7 @@ function filterNotExistBarcodes(barcodes){
     }
     return filterBarcodes;
 }
+
 function countTimes(barcodes){
     var mergeConmmon = [];
     for(var i=0;i<barcodes.length;i++){
@@ -43,6 +45,7 @@ function countTimes(barcodes){
     }
     return mergeConmmon;
 }
+
 function checkBarcodeExist(barcode){
     var isExist =true;
     if(getBarcodeInfo(barcode)==""){
@@ -50,6 +53,7 @@ function checkBarcodeExist(barcode){
     }
     return isExist;
 }
+
 function findAllBarcodesData(){
     return [
         {
@@ -84,6 +88,7 @@ function findAllBarcodesData(){
          }
      ];
 }
+
 function getBarcodeInfo(barcode){
     var barcodesInfo = findAllBarcodesData();
     var barcodeInfo="";
@@ -94,9 +99,11 @@ function getBarcodeInfo(barcode){
     }
     return barcodeInfo;
 }
+
 function calculate(num,price){
     return num*price;
 }
+
 module.exports = {
     printReceipt
 };
